@@ -8,7 +8,14 @@
 // @include *://chat.meta.stackexchange.com/*
 // ==/UserScript==
 
-function hide_show($) {
+function with_jquery(f) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.textContent = "(" + f.toString() + ")(jQuery)";
+    document.body.appendChild(script);
+}
+
+with_jquery(function($) {
 
     function hide_show_users() {
         var present_users = $("#present-users");
@@ -92,11 +99,4 @@ function hide_show($) {
 
     hide_show_users();
     hide_show_info();
-}
-
-window.addEventListener('load', function() {
-    var scriptEl = document.createElement('script');
-    scriptEl.type = 'text/javascript';
-    scriptEl.text = '(' + hide_show + ')(jQuery);';
-    document.head.appendChild(scriptEl);
 });
