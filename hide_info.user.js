@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name Hide/Show Unnecessary Info in Chat
+// @name Hide Unnecessary Info in SE Chat
 // @version 1.0
 // @author michaelpri
-// @description Userscript to hide/show unecessary information that takes up room on the chat sidebar
+// @description Userscript to hide unecessary or cluttering information that takes up room on the chat sidebar
 // @include *://chat.stackexchange.com/*
 // @include *://chat.stackoverflow.com/*
 // @include *://chat.meta.stackexchange.com/*
